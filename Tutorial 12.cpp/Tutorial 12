@@ -1,0 +1,24 @@
+#include <iostream>
+namespace p1
+{
+    int add(int m, int n)
+    {
+        return m+n;
+    }
+}
+namespace p2
+{
+    int sub(int m, int n)
+    {
+        return m-n;
+    }
+}
+
+int main()
+{
+    int ans = p1::add(87,6);
+    int diff = p2::sub(85,54);
+    std::cout  << "Addition is: " << ans << std::endl;
+    std::cout  << "Subtraction is: " << diff << std::endl;
+
+}
