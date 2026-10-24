@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+template <typename classT>
+class calculator
+{
+    classT n1,n2;
+    public:
+    calculator(classT a, classT b) 
+    {
+        n1 = a;
+        n2 = b;
+    }
+    void display()
+    {
+        cout << "Addition of given two number's is: " << add(n1,n2);
+        cout << "\nDivision of given two number's is: " << div(n1,n2);
+        cout << "\nSubtraction of given two number's is: " << sub(n1,n2);
+        cout << "\nMultiplication of given two number's is: " << mul(n1,n2) << endl;
+    }
+    classT add(classT num1,classT num2)
+    {
+        return num1 + num2;
+    }
+
+    classT div(classT num1,classT num2)
+    {
+        return num1 / num2;
+    }
+
+    classT sub(classT num1,classT num2)
+    {
+        return num1 - num2;
+    }
+
+    classT mul(classT num1,classT num2)
+    {
+        return num1 * num2;
+    }
+    
+    void calculaor(classT a, classT b)
+    {
+        n1 = a;
+        n2 = b;
+        display();
+    }
+    
+};
+int main() 
+{
+    calculator <int> i(81,9);
+    i.display();
+    cout<<"\n";
+    calculator <double> d(56.84,2.4);
+    d.display();
+}
